@@ -1,0 +1,54 @@
+{%extends 'base.html' %}
+{%block content%}
+    <hr style="border-color: red;border:solid">
+
+    <div class="row">
+        <div class="col-8">
+            <h4>Informació de Contacte</h4>
+            <div class="row">
+                <div class="col-6">
+                    <h5>Bernat Viana</h5>
+                    <img title="support" src="http://www.muebleslapaloma.com/wp-content/uploads/2014/02/Berna2.jpg"
+                         alt="" width="115" height="150">
+                    <a href="mailto:bernat@mobleslapaloma.cat">bernat@mobleslapaloma.cat</a>
+                    <p align="center">Tlf. 664.872.902</p>
+                </div>
+                <div class="col-6">
+                    <h5>Elvira Bel Miralles</h5>
+                    <img title="support" src="http://www.muebleslapaloma.com/wp-content/uploads/2014/02/Berna2.jpg"
+                         alt="" width="115" height="150">
+                    <a href="mailto:info@mobleslapaloma.cat">info@mobleslapaloma.cat</a>
+                    <p align="center">Tlf. 972.500.371</p>
+                </div>
+            </div>
+            <h4>Formulari de Contacte</h4>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" name="nombre" placeholder="Nombre completo">
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email" placeholder="ejemplo@email.com">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Danos tu mensaje"></textarea>
+                <input id="submit" name="submit" type="submit" value="Enviar">
+            </form>
+
+        </div>
+
+        <div class="col-4">
+            <h4>Ubicació</h4>
+            <p><strong>Direcció :</strong> C/ REC ARNAU, 7 – 17600 Figueres<br>
+            <strong>Tel:</strong> (+34) 972 500 371<br>
+            <strong>E-mail 1 :</strong> <a href="mailto:info@muebleslapaloma.com">info@muebleslapaloma.com</a><br>
+            <strong>E-mail 2 :</strong> <a href="mailto:info@mobleslapaloma.cat">info@mobleslapaloma.cat</a></p>
+            <h4>Horari Comercial</h4>
+            <p><strong>Dilluns a Divendres:</strong> 9:00h – 13:00h/16:00h – 20:00h<br>
+            <strong>Dissabte:</strong> 10:00h – 13:00h/17:00h – 20:00h<br>
+            <strong>Diumenge:</strong> Tancat</p>
+            <p><iframe width="95%" height="300" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=es&amp;q=Carrer%20Rec%20Arnau%2C%207%2C%2017600+(Mobles%20la%20paloma)&amp;ie=UTF8&amp;t=k&amp;z=16&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></p>
+            <p><small><a style="color: #0000ff; text-align: left;" href="https://www.google.es/maps/place/Carrer+del+Rec+Arnau,+7,+17600+Figueres,+Girona/@42.269622,2.9588899,1712m/data=!3m1!1e3!4m5!3m4!1s0x12ba8ddb86e611e9:0x746cd23089d43ff7!8m2!3d42.2701155!4d2.9630468?hl=es">Ver mapa más grande</a></small></p>
+        </div>
+    </div>
+
+
+    <h1>aqui</h1>
+{%endblock %}
