@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load staticfiles %}
 
-</body>
-</html>
+{% block content %}
+
+    <div class="row">
+
+        <a href="{% url 'muebles:nuevo_mueble' %}" class="btn btn-sm btn-success text-right"><span
+                class="fa fa-plus"></span> Nuevo Mueble</a>
+    </div>
+    <h6 class="description">Muebles</h6>
+    <div class="row pt-md">
+        {% if muebles %}
+            {% for mueble in muebles %}
+
+            {% endfor %}
+
+        {% else %}
+            <p>No hay Muebles </p>
+        {% endif %}
+    </div>
+
+
+
+{% endblock %}

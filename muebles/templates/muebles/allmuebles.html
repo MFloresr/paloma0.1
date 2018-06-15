@@ -1,10 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load staticfiles %}
 
-</body>
-</html>
+{% block content %}
+
+    <div class="row">
+
+        <a href="{% url 'muebles:nuevo_mueble' %}" class="btn btn-sm btn-success text-right"><span
+                class="fa fa-plus"></span> Nuevo Mueble</a>
+
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="card-group">
+        <div class="card ">
+            <div class="card-header bg-danger text-white">Nuestros Muebles</div>
+            <div class="card-body">
+                <div class="row">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        {% if categorias %}
+                            {% for categoria in categorias %}
+                                <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#{{categoria.nombre_categoria }}" role="tab" aria-controls="{{categoria.nombre_categoria}}">{{categoria.nombre_categoria}}</a>
+                                </li>
+                            {% endfor %}
+                            </ul>
+
+                        {% else %}
+                        <p>no hay categorias</p>
+                        {% endif %}
+
+
+                    <div class="tab-content">
+                        {% if categorias %}
+                            {% for categoria in categorias %}
+                                <div class="tab-pane active" id="{{categoria.nombre_categoria}}" role="tabpanel">{{categoria.nombre_categoria}}</div>
+                                TODO
+                            {% endfor %}
+
+                        {% else %}
+                            aqui aun no hay contenido
+                        {% endif %}
+
+                    </div>
+
+
+             </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
